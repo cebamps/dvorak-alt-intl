@@ -5,13 +5,13 @@
 	<key>CFBundleIdentifier</key>
 	<string>org.sil.ukelele.keyboardlayout.dvorak-custom</string>
 	<key>CFBundleName</key>
-	<string>dvorak-custom-v2-4</string>
+	<string>dvorak-custom-v3</string>
 	<key>CFBundleVersion</key>
 	<string></string>
-	<key>KLInfo_Dvorak alt-intl nodeadkeys</key>
+	<key>KLInfo_Dvorak alt-intl nodead</key>
 	<dict>
 		<key>TISInputSourceID</key>
-		<string>org.sil.ukelele.keyboardlayout.dvorak-custom.dvorakalt-intlnodeadkeys</string>
+		<string>org.sil.ukelele.keyboardlayout.dvorak-custom.dvorakalt-intlnodead</string>
 		<key>TISIntendedLanguage</key>
 		<string>en</string>
 	</dict>

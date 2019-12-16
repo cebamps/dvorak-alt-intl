@@ -1,8 +1,8 @@
 <?xml version="1.1" encoding="UTF-8"?>
 <!DOCTYPE keyboard SYSTEM "file://localhost/System/Library/DTDs/KeyboardLayout.dtd">
 <!--Created by Ukelele version 3.2.5.180 on 2017-07-26 at 13:31 (GMT+2)-->
-<!--Last edited by Ukelele version 3.2.7.195 on 2018-11-05 at 09:56 (GMT+1)-->
-<keyboard group="126" id="-25756" name="Dvorak alt-intl nodeadkeys" maxout="1">
+<!--Last edited by Ukelele version 3.2.7.195 on 2019-12-16 at 13:38 (GMT+1)-->
+<keyboard group="126" id="-25756" name="Dvorak alt-intl nodead" maxout="1">
 	<layouts>
 		<layout first="0" last="17" mapSet="ANSI" modifiers="Modifiers"/>
 		<layout first="18" last="18" mapSet="JIS" modifiers="Modifiers"/>
@@ -58,13 +58,13 @@
 			<key code="3" action="u"/>
 			<key code="4" output="d"/>
 			<key code="5" action="i"/>
-			<key code="6" output=";"/>
+			<key code="6" action=";"/>
 			<key code="7" output="q"/>
 			<key code="8" output="j"/>
 			<key code="9" output="k"/>
 			<key code="10" output="`"/>
 			<key code="11" output="x"/>
-			<key code="12" output="&#x0027;"/>
+			<key code="12" action="&#x0027;"/>
 			<key code="13" output=","/>
 			<key code="14" output="."/>
 			<key code="15" output="p"/>
@@ -364,7 +364,7 @@
 			<key code="9" output=""/>
 			<key code="10" action="2"/>
 			<key code="11" output=""/>
-			<key code="12" output="¨"/>
+			<key code="12" action="¨"/>
 			<key code="13" output="ˇ"/>
 			<key code="14" output="·"/>
 			<key code="15" action="¸"/>
@@ -1027,6 +1027,9 @@
 		</keyMap>
 	</keyMapSet>
 	<actions>
+		<action id="&#x0027;">
+			<when state="none" output="&#x0027;"/>
+		</action>
 		<action id="2">
 			<when state="none" next="2"/>
 		</action>
@@ -1045,11 +1048,15 @@
 		<action id="5">
 			<when state="none" next="2"/>
 		</action>
+		<action id=";">
+			<when state="none" output=";"/>
+		</action>
 		<action id="A">
 			<when state="none" output="A"/>
 			<when state="1" output="À"/>
 			<when state="2" output="Ã"/>
 			<when state="3" output="Â"/>
+			<when state="4" output="Ä"/>
 			<when state="accent-aigu" output="Á"/>
 			<when state="ogonek" output="Ą"/>
 		</action>
@@ -1078,10 +1085,31 @@
 			<when state="Dead Key State A" next="DK-A"/>
 			<when state="Tick" next="Dead Key State A"/>
 		</action>
+		<action id="Dead Key State 4">
+			<when state="none" next="1"/>
+			<when state="Dead Key State A" next="DK-A"/>
+			<when state="Tick" next="Dead Key State A"/>
+		</action>
+		<action id="Dead Key State 5">
+			<when state="none" next="1"/>
+			<when state="Dead Key State A" next="DK-A"/>
+			<when state="Tick" next="Dead Key State A"/>
+		</action>
+		<action id="Dead Key State 6">
+			<when state="none" next="1"/>
+			<when state="Dead Key State A" next="DK-A"/>
+			<when state="Tick" next="Dead Key State A"/>
+		</action>
+		<action id="Dead Key State 7">
+			<when state="none" next="1"/>
+			<when state="Dead Key State A" next="DK-A"/>
+			<when state="Tick" next="Dead Key State A"/>
+		</action>
 		<action id="E">
 			<when state="none" output="E"/>
 			<when state="1" output="È"/>
 			<when state="3" output="Ê"/>
+			<when state="4" output="Ë"/>
 			<when state="accent-aigu" output="É"/>
 			<when state="ogonek" output="Ę"/>
 		</action>
@@ -1094,6 +1122,7 @@
 			<when state="none" output="I"/>
 			<when state="1" output="Ì"/>
 			<when state="3" output="Î"/>
+			<when state="4" output="Ï"/>
 			<when state="accent-aigu" output="Í"/>
 		</action>
 		<action id="I 1">
@@ -1109,6 +1138,7 @@
 			<when state="1" output="Ò"/>
 			<when state="2" output="Õ"/>
 			<when state="3" output="Ô"/>
+			<when state="4" output="Ö"/>
 			<when state="accent-aigu" output="Ó"/>
 		</action>
 		<action id="O 1">
@@ -1119,6 +1149,7 @@
 			<when state="none" output="U"/>
 			<when state="1" output="Ù"/>
 			<when state="3" output="Û"/>
+			<when state="4" output="Ü"/>
 			<when state="accent-aigu" output="Ú"/>
 		</action>
 		<action id="U 1">
@@ -1146,6 +1177,7 @@
 			<when state="1" output="à"/>
 			<when state="2" output="ã"/>
 			<when state="3" output="â"/>
+			<when state="4" output="ä"/>
 			<when state="accent-aigu" output="á"/>
 			<when state="ogonek" output="ą"/>
 		</action>
@@ -1183,6 +1215,7 @@
 			<when state="none" output="e"/>
 			<when state="1" output="è"/>
 			<when state="3" output="ê"/>
+			<when state="4" output="ë"/>
 			<when state="accent-aigu" output="é"/>
 			<when state="ogonek" output="ę"/>
 		</action>
@@ -1190,6 +1223,7 @@
 			<when state="none" output="i"/>
 			<when state="1" output="ì"/>
 			<when state="3" output="î"/>
+			<when state="4" output="ï"/>
 			<when state="accent-aigu" output="í"/>
 		</action>
 		<action id="n">
@@ -1201,17 +1235,22 @@
 			<when state="1" output="ò"/>
 			<when state="2" output="õ"/>
 			<when state="3" output="ô"/>
+			<when state="4" output="ö"/>
 			<when state="accent-aigu" output="ó"/>
 		</action>
 		<action id="u">
 			<when state="none" output="u"/>
 			<when state="1" output="ù"/>
 			<when state="3" output="û"/>
+			<when state="4" output="ü"/>
 			<when state="accent-aigu" output="ú"/>
 		</action>
 		<action id="y">
 			<when state="none" output="y"/>
 			<when state="accent-aigu" output="ý"/>
+		</action>
+		<action id="¨">
+			<when state="none" next="4"/>
 		</action>
 		<action id="´">
 			<when state="none" next="accent-aigu"/>
@@ -1228,7 +1267,7 @@
 		<when state="1" output="`"/>
 		<when state="2" output="˜"/>
 		<when state="3" output="^"/>
-		<when state="4" output="`"/>
+		<when state="4" output="¨"/>
 		<when state="5" output="¸"/>
 		<when state="DK-A" output=""/>
 		<when state="Dead Key State 0" output=""/>
